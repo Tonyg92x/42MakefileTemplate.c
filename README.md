@@ -47,6 +47,7 @@ git clone git@github.com:Tonyg92x/42MakefileTemplate.git
 ## Authors
 <p align="left">
   Anthony Guay anthony.guay112@gmail.com
+<p align="left">
   Maxime Mondel AKA Armorine86 https://github.com/Armorine86
  
 <p align="right">(<a href="#top">back to top</a>)</p>
