@@ -34,7 +34,7 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-This is simply all the knowledge ive learned on Makefile at 42 school. Armorine86 helped me a lot to make this Makefile. I used his makefile when I started at 42Quebec but I wanted to upgrade it a little bit by adding some comments and things you could do.
+This is simply all the knowledge ive learned on Makefile at 42 school. Armorine86 made this makefile, I added some comments to it basicly. I used his makefile when I started at 42Quebec but I wanted to upgrade it a little bit by adding some comments and things you could do.
 <p align="left">
 
   <!-- INSTALLATION -->
