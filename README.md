@@ -43,6 +43,7 @@ Use this command to clone the repository :
 ```markdown
 git clone git@github.com:Tonyg92x/42MakefileTemplate.c.git
 ```
+then just make setup
 <!-- Authors -->
 ## Authors
 <p align="left">
