@@ -9,10 +9,10 @@
     <img src="images/42_Logo.svg.png" alt="Logo" width="80" height="80">
   </a>
 
-<h3 align="center">Minishell</h3>
+<h3 align="center">Makefile Template</h3>
 
   <p align="center">
-    42 Home made Shell in c
+    42 I hope this can help new student's
   </p>
 </div>
 
@@ -34,19 +34,20 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-
+This is simply all the knowledge ive learned on Makefile at 42 school. Armorine86 helped me a lot to make this Makefile. I used his makefile when I started at 42Quebec but I wanted to upgrade it a little bit by adding some comments and things you could do.
 <p align="left">
 
   <!-- INSTALLATION -->
 ## Installation
 Use this command to clone the repository :
 ```markdown
-git clone git@github.com:Tonyg92x/42Minishell.git
+git clone git@github.com:Tonyg92x/42MakefileTemplate.git
 ```
 <!-- Authors -->
 ## Authors
 <p align="left">
   Anthony Guay anthony.guay112@gmail.com
+  Maxime Mondel AKA Armorine86 https://github.com/Armorine86
  
 <p align="right">(<a href="#top">back to top</a>)</p>
 
