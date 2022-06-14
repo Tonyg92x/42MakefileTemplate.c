@@ -6,7 +6,7 @@
 #    By: anthony <anthony@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/31 08:51:26 by aguay             #+#    #+#              #
-#    Updated: 2022/06/14 08:23:49 by anthony          ###   ########.fr        #
+#    Updated: 2022/06/14 09:13:12 by anthony          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,8 +15,8 @@
 #	
 #	This Makefile is inspired a lot from
 #	his Makefile template. I played with
-#	it and add comment for new student's
-#	at 42 Quebec.
+#	it and add comment for new student at
+#	42 Quebec.
 
 ## -----  NAME OF THE PROGRAMM ----- ##
 NAME 			= HelloWorld
@@ -25,13 +25,6 @@ NAME 			= HelloWorld
 CC				= clang
 
 CFLAGS			= -Wall -Wextra -Werror
-
-## ----- PATH TO DIRECTORIES ----- ##
-SRCS_DIR		= srcs/
-
-OBJ_DIR			= obj/
-
-INCLUDE_DIR		= includes/
 
 ## ----- ADD FILES TUTORIAL ----- ##
 
@@ -51,9 +44,38 @@ INCLUDE_DIR		= includes/
 #
 #	VPATH = $(X_DIR)
 
+## ----- PATH TO DIRECTORIES ----- ##
+SRCS_DIR		= srcs/
+
+OBJ_DIR			= obj/
+
+INCLUDE_DIR		= includes/
+
+MAIN_DIR		= $(SRCS_DIR)main
+
 ## ----- FILES ----- ##
 SRCS_FILES		=						\
 
+MAIN_FILES		=						\
+					main.c				\
+
+## ----- ADDPREFIX TO FILES ----- ##
+
+OBJS			=	$(addprefix $(OBJ_DIR), $(OBJ_FILES))
+MAIN_SRCS		=	$(addprefix $(MAIN_DIR), $(MAIN_FILES))
+
+OBJ_FILES		=	$(SRCS_FILES:.c=.o) $(MAIN_FILES:.c=.o)
+
+VPATH			=	$(SRCS_DIR) $(MAIN_DIR)
+
+## ----- .C TO .O CONVERT ----- ##
+
+$(OBJ_DIR)%.o: %.c
+	$(CC) $(CFLAGS) -I $(INCLUDE_DIR) -c $< -o $@
+#	Here you can add any header foler by adding -I $(header_directory)
+
+
+#--------------------------------------------------------------#
 ## ----- compile differently on other os ----- ##
 #
 # ifeq ($(shell uname), Linux)
@@ -72,21 +94,6 @@ SRCS_FILES		=						\
 #		Note : You cant put ifeq and endif in a variable/macro. It has
 #				to be outside (ifeq before and endif after) any
 #				declaration in Makefile
-
-## ----- .C TO .O CONVERT ----- ##
-
-$(OBJ_DIR)%.o: %.c
-	$(CC) $(CFLAGS) -I $(INCLUDE_DIR) -c $< -o $@
-#	Here you can add any header foler by adding -I $(header_directory)
-
-## ----- ADDPREFIX TO FILES ----- ##
-
-OBJS			=	$(addprefix $(OBJ_DIR), $(OBJ_FILES))
-OBJ_FILES		=	$(SRCS_FILES:.c=.o)
-
-VPATH			=	$(SRCS_DIR)
-
-#--------------------------------------------------------------#
 
 ## ----- TOOLS AND COLORS ----- ##
 RM				= rm -rf
@@ -148,9 +155,6 @@ opti: obj $(NAME)
 
 leak: obj $(NAME)
 	@valgrind ./minishell
-
-setup:
-	@rm -rf LICENSE images README.md .git
 
 ## ----- CLEAN COMMANDS ----- ##
 
