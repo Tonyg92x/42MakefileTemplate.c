@@ -12,7 +12,7 @@
 <h3 align="center">Makefile Template</h3>
 
   <p align="center">
-    42 I hope this can help new student's
+    I hope this can help new student's
   </p>
 </div>
 
