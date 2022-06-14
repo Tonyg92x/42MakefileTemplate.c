@@ -6,7 +6,7 @@
 #    By: anthony <anthony@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/31 08:51:26 by aguay             #+#    #+#              #
-#    Updated: 2022/06/14 07:06:56 by anthony          ###   ########.fr        #
+#    Updated: 2022/06/14 08:23:49 by anthony          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -148,6 +148,9 @@ opti: obj $(NAME)
 
 leak: obj $(NAME)
 	@valgrind ./minishell
+
+setup:
+	@rm -rf LICENSE images README.md .git
 
 ## ----- CLEAN COMMANDS ----- ##
 
